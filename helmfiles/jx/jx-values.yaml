@@ -20,12 +20,22 @@ jxRequirements:
     enabled: false
     schedule: ""
   cluster:
+    azure:
+      secretStorage:
+        keyVaultName: assured-osprey
+      storage:
+        storageAccountName: jxassuredosprey
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    environmentGitOwner: vnemane
     gitKind: github
     gitName: github
     gitServer: https://github.com
     provider: aks
+    registry: assuredosprey.azurecr.io
   environments:
   - key: dev
+    owner: vnemane
+    repository: jx3-azure-akv
   - key: staging
   - key: production
   ingress:
@@ -36,8 +46,13 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: virajnemane
   repository: nexus
   secretStorage: azurekeyvault
+  storage:
+  - name: logs
+    url: azblob://logs
   vault: {}
   webhook: lighthouse
 jxRequirementsIngressExternalDNS:
