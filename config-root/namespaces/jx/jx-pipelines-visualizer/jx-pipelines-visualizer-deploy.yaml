@@ -45,7 +45,7 @@ spec:
             - -archived-pipelineruns-url-template
             - azblob://logs/jenkins-x/pipelineruns/{{.Namespace}}/{{.Name}}.yaml
             - -pipeline-trace-url-template
-            - http://grafana-jx-observability.change.me/explore?left=%5B%22now%22,%22now%22,%22Tempo%22,%7B%22query%22:%22{{.TraceID}}%22%7D%5D
+            - http://grafana-jx-observability.20.211.56.119.nip.io/explore?left=%5B%22now%22,%22now%22,%22Tempo%22,%7B%22query%22:%22{{.TraceID}}%22%7D%5D
             - -log-level
             - INFO
           env:

@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - vnemane/jx3-azure-akv
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.20.211.56.119.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
